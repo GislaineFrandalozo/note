@@ -4,44 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500&display=swap" rel="stylesheet"> 
+    <link  rel="stylesheet"  media="screen and (min-width: 160px) and (max-width: 534px)" type="text/css" href="/css/mobile-mini-home.css">
+    <link  rel="stylesheet"  media="screen and (min-width: 535px) and (max-width: 767px)" type="text/css" href="/css/mobile-home.css">
+    <link  rel="stylesheet"  media="screen and (min-width: 768px) and (max-width: 1170px)" type="text/css" href="/css/desktop-home.css">
+    <link  rel="stylesheet"  media="screen and (min-width: 1171px)" type="text/css" href="/css/desktop-home-2.css">
     <title>note++</title>
 </head>
 <body>
     <nav>
-        <div>
-            <img src="#" alt="icon login">
-            <a href="./login.html">login</a>
-        </div>
-        <div>
-            <img src="#" alt="icon creat account">
+        <div class="creat-account">
+            <a href="./creat-account.html"> <img src="/image/add-user(1).png" alt="icon creat account"></a>
             <a href="./creat-account.html">Crie uma conta</a>
+        </div>
+        <div class="login">
+            <a href="./login.html"><img src="/image/user.png" alt="icon login"></a>
+            <a href="./login.html">login</a>
         </div>
     </nav>
     <section>
         <div>
-            <a href="./index.html"> <img src="#" alt="icon note++" title="Recarregue a página"> </a>
+            <a href="./index.html"> <img class="icon-logo" src="/image/marca-paginas(1) 1.png" alt="icon note++" title="Recarregue a página"> </a>
         </div>
-        <div>
+        <div class="title-text">
             <h1>note++</h1>
         </div>
-        <div>
+        <div class="text">
             <p>Site desenvolvido exclusivamente para fins didáticos.</p>
-            <p> Mas você pode utilizar de suas funcionalidades, tá bom ?</p><img src="#" alt="happy face">
+            <p class="emoticon"> Mas você pode utilizar de suas funcionalidades, tá bom ?<img src="/image/happy.png" alt="happy"></p>
             <p>- Crie e exclua blocos de notas </p>
         </div>
+        <img id="note" src="/image/Component 1.svg">
     </section>
     <footer>
         <div>
-            <p>Developer <p>Gislaine Frandalozo</p></p>
+            <p>Developer <p class="dev-name">Gislaine Frandalozo</p></p>
         </div>
-        <div><img src="#" alt="divider"></div>
+        <div class="divider"><img src="/image/Line 10.svg" alt="divider"></div>
         <div>
-            <p>
-                <a href="https://github.com/GislaineFrandalozo"> <img src="#" alt="icon github"></a>
+            <p class="networks">
+                <a href="https://github.com/GislaineFrandalozo"> <img src="/image/github.png" alt="icon github"></a>
                 <a href="https://github.com/GislaineFrandalozo">https://github.com/GislaineFrandalozo</a>
             </p>
-            <p>
-                <a href="https://www.linkedin.com/in/gislaine-frandalozo-888041213/"><img src="#" alt="icon linkedin"></a>
+            <p class="networks">
+                <a href="https://www.linkedin.com/in/gislaine-frandalozo-888041213/"><img src="/image/linkedin.png" alt="icon linkedin"></a>
                 <a href="https://www.linkedin.com/in/gislaine-frandalozo-888041213/">https://www.linkedin.com/in/gislaine-frandalozo-888041213/</a>
             </p>
 
