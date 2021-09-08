@@ -7,9 +7,9 @@ const button = document.querySelector("#button")
 const crateAccount = button.addEventListener('click', () => {
 
     try{
-        validateInputs(input_name.value, input_password.value)
+        const e = validateInputs(input_name.value, input_password.value)
+        console.log(e)
         const user = new form (input_name.value,input_date.value, input_email.value, input_password.value)
-    
         const userAccount = localStorage.getItem(input_name.value)
         if(userAccount){ 
         throw "Este nome já está sendo usado"
@@ -35,12 +35,12 @@ class form {
 }
 function validateInputs(name, password) {
     if(name.length < 3){
-        alert("Nome muito curto, no mínimo três caracteres.")
+        throw "Nome muito curto, no mínimo três caracteres."
     }
     if (password.length < 3){
-        alert("Senha muito curta, no mínimo três caractres.")
+        throw "Senha muito curta, no mínimo três caractres."
     }
     else{
-        return console.log("")
+        return ""
     }
 }
