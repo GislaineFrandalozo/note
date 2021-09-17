@@ -6,27 +6,27 @@ const button = document.querySelector("#button")
 
 const crateAccount = button.addEventListener('click', () => {
 
-    try{
+    try {
         const e = validateInputs(input_name.value, input_password.value)
         console.log(e)
-        const user = new form (input_name.value,input_date.value, input_email.value, input_password.value)
+        const user = new form(input_name.value, input_date.value, input_email.value, input_password.value)
         const userAccount = localStorage.getItem(input_name.value)
-        if(userAccount){ 
-        throw "Este nome já está sendo usado"
-        }else{ 
-        localStorage.setItem(input_name.value, JSON.stringify(user))
-        console.log(localStorage)
-        alert("Cadastro criado com sucesso, faça login para iniciar a sessão!")
+        if (userAccount) {
+            throw "Este nome já está sendo usado"
+        } else {
+            localStorage.setItem(input_name.value, JSON.stringify(user))
+            console.log(localStorage)
+            alert("Cadastro criado com sucesso, faça login para iniciar a sessão!")
         }
 
-    }catch(e){
+    } catch (e) {
         alert(e)
     }
 
 })
 
 class form {
-    constructor(name, date, email, password){
+    constructor(name, date, email, password) {
         this.name = name
         this.date = date
         this.email = email
@@ -34,13 +34,13 @@ class form {
     }
 }
 function validateInputs(name, password) {
-    if(name.length < 3){
+    if (name.length < 3) {
         throw "Nome muito curto, no mínimo três caracteres."
     }
-    if (password.length < 3){
+    if (password.length < 3) {
         throw "Senha muito curta, no mínimo três caractres."
     }
-    else{
+    else {
         return ""
     }
 }

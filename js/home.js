@@ -3,19 +3,19 @@ verifySession()
 const sign_out = button.addEventListener('click', () => {
     console.log("")
     sign_outSession()
-    
+
 })
 function sign_outSession() {
     const session = sessionStorage.getItem("online")
-    if(session){
-    sessionStorage.clear()
-    const page_index = document.location.href.replace("html/home-note.html", "html/index.html");
-    return document.location = page_index
+    if (session) {
+        sessionStorage.clear()
+        const page_index = document.location.href.replace("html/home-note.html", "html/index.html");
+        return document.location = page_index
+    }
 }
-}
-function verifySession(){
+function verifySession() {
     const session = sessionStorage.getItem("online")
-    if(!session){
+    if (!session) {
         const page_index = document.location.href.replace("html/home-note.html", "html/index.html");
         return document.location = page_index
     }
