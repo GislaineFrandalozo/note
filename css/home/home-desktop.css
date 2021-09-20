@@ -1,0 +1,66 @@
+:root{
+    --color-font: rgb(46, 46, 46);
+    --color-font-hover:rgb(255, 255, 255);
+    --text-shadow:rgba(0, 0, 0, 0.19);
+    --theme-shadow:rgba(252, 252, 252, 0.576);
+    --background-color-page:rgba(242, 242, 242, 1);
+    --hover:rgba(196, 196, 196, 0.741);
+    --hover-shadow:rgba(255, 255, 255, 0.26);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: var(--background-color-page);
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+
+}
+.icon-logo{
+    height: 8rem;
+    width: 4rem;
+    margin-left: 7.5rem;
+    margin-top: 3rem;
+} 
+.init{
+   position: absolute;
+   margin-top: 5rem;
+   margin-left: 22rem;
+}
+h1{
+    margin-bottom: 2rem;
+    font-family:'M PLUS Rounded 1c', sans-serif;
+    font-weight:bolder;
+    font-size: 2.3rem;
+    color: var(--color-font);
+    text-shadow: 3px 4px 7px var(--text-shadow);
+}
+.init > a {
+    text-decoration: none;
+    margin-left: 1rem;
+    font-family:'M PLUS Rounded 1c', sans-serif;
+    font-weight:bolder;
+    font-size: 1rem;
+    color: var(--color-font);
+    transition: 0.2s;
+}
+.init > a:hover{
+    color: var(--color-font-hover);
+    text-shadow: 3px 4px 7px var(--text-shadow);
+}
+.init > a > i {
+    padding-right: 1.2rem;
+}
+.settings{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    margin-right: 2.5rem;
+}
+.settings > img{
+    height: 2.5rem;
+    
+}

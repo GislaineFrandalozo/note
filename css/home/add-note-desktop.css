@@ -1,0 +1,143 @@
+:root{
+    --color-font: rgb(46, 46, 46);
+    --color-font-hover:rgb(255, 255, 255);
+    --text-shadow:rgba(0, 0, 0, 0.19);
+    --theme-shadow:rgba(252, 252, 252, 0.576);
+    --background-color-page:rgba(242, 242, 242, 1);
+    --hover:rgba(196, 196, 196, 0.741);
+    --hover-shadow:rgba(255, 255, 255, 0.26);
+    --menu: rgba(196, 196, 196, 1);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: var(--background-color-page);
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+
+}
+.icon-logo{
+    height: 8rem;
+    width: 4rem;
+    margin-left: 7.5rem;
+    margin-top: 3rem;
+} 
+.title{
+   position: absolute;
+   margin-top: 5rem;
+   margin-left: 22rem;
+}
+h1{
+    margin-bottom: 2rem;
+    font-family:'M PLUS Rounded 1c', sans-serif;
+    font-weight:bolder;
+    font-size: 2.3rem;
+    color: var(--color-font);
+    text-shadow: 3px 4px 7px var(--text-shadow);
+}
+main{
+    display: flex;
+    
+}
+.note{
+    margin-left: 5.5rem;
+    height:28rem;
+    width: 37rem;
+    background-color: rgba(221, 44, 44, 0.774);
+    box-shadow: 4px 6px 7px var(--text-shadow), inset 2px 2px 15px var(--hover-shadow);
+    border-radius: 5px;
+}
+.note > input {
+    background-color: rgba(247, 162, 162, 0.884);
+    height: 2.3rem;
+    width: 28rem;
+    padding-left: 1.5%;
+    margin: 4%;
+    font-family:'M PLUS Rounded 1c', sans-serif;
+    font-weight:bolder;
+    font-size: 1rem;
+    color: var(--color-font);
+    border: 0rem;
+    box-shadow: inset 5px 4px 6px var(--text-shadow);
+}
+.menu{
+    background-color: var(--menu);
+    padding: 0.5rem;
+    font-family:'M PLUS Rounded 1c', sans-serif;
+    font-weight:bolder;
+    font-size: 1rem;
+    color: var(--color-font);
+    margin-top: 4%;
+    height: 21rem;
+    width: 11.5rem;
+    box-shadow: 4px 4px 8px var(--text-shadow), inset 1px 5px 9px var(--hover-shadow);
+    border-radius: 0px 30px 30px 0px;
+}
+.menu > h3 {
+    margin: 1.3rem 0.5rem 0rem;
+}
+.color{
+    border: 0rem;
+    margin: 2% 5% 0%;
+    height: 1.3rem;
+    background: var(--text-shadow);
+    border-radius: 0.2rem;
+    transition: 0.2s;
+}
+.color:hover{
+    background: var(--color-font) ;
+}
+.attributes {
+    margin-top: 10%;
+    margin-left: 5%;
+}
+.attributes > p > i{
+    padding-right: 0.5rem;
+}
+.attributes  > p {
+    margin: 3%;
+    transition: 0.2s;
+}
+.attributes  > p:hover {
+    color: var(--color-font-hover);
+    text-shadow: 3px 4px 7px var(--text-shadow);
+}
+.tools{
+    margin-left: 0rem;
+    margin-top: 7%;
+    margin-bottom: 7%;
+    
+}
+.tools > p:hover {
+    color: var(--color-font-hover);
+    text-shadow: 3px 4px 7px var(--text-shadow);
+}
+.menu > button{
+    background-color: var(--text-shadow);
+    margin: 3% 30% 3%;
+    padding: 2%;
+    border: 0rem;
+    border-radius: 0.2rem;
+    font-family:'M PLUS Rounded 1c', sans-serif;
+    font-weight:bolder;
+    font-size: 0.8rem;
+    color: var(--color-font);
+    transition: 0.2s;
+    
+}
+.menu > button:hover {
+    box-shadow: 1px 1px 5px var(--text-shadow);
+}
+.settings{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    margin-right: 2.5rem;
+}
+.settings > img{
+    height: 2.5rem;
+}

@@ -1,32 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/css/home/home-desktop.css">
+    <link rel="stylesheet" type="text/css" href="/css/home/add-note-desktop.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500&display=swap" rel="stylesheet">
     <title>note++</title>
 </head>
-
 <body>
     <nav>
     <div>
         <a href="./home-note.html"> <img class="icon-logo" src="/image/marca-paginas(1) 1.png" alt="icon note++" title="Home"> </a>
     </div>
-    <div class="init">
-        <h1>Bem vindo, usuário!</h1>
-        <a href="./add-note.html"><i>+</i>Add note</a>
+    <div class="title">
+        <h1>Crie sua anotação</h1>
     </div>
     <div class="settings">
         <img src="/image/engrenagem.svg" alt="Configurações" title="Configurações">
-        <button id="sign_out">SAIR</button>
     </div>
     </nav>
-    <script src="/js/home.js"></script>
-</body>
+    <main>
+        <section class="menu">
+         <h3>
+             <label>Escolha uma cor <input class="color" type="color"></label>
+         </h3>   
+         <ul class="attributes">
+             <p><i>+</i> Texto</p>
+             <p><i>+</i> Checklist</p>
+             <p><i>+</i> Tabela</p>
+             <p><i>+</i> Link</p>
+         </ul>
+         <ul class="tools">
+            <p><i>-</i> Calculadora</p>
+         </ul>
+         <button>Criar note</button>
 
+        </section>
+        <section>
+            <div class="note">
+            <input type="text" value="Title">
+            </div>
+        </section>
+    </main>
+    
+</body>
 </html>
