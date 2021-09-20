@@ -1,13 +1,13 @@
 const inputName = document.querySelector("#name")
 const inputPassword = document.querySelector("#password")
 const buttonLogin = document.querySelector("#button")
-loginAccount()
-const login = buttonLogin.addEventListener('click', () => {
+buttonLogin.addEventListener('click', (event) => {
+    event.preventDefault()
     try {
-        console.log(" ");
         const validatePassword = validateInputs(inputName.value, inputPassword.value)
         if (validatePassword == "true") {
             sessionStorage.setItem("online", inputName.value)
+            loginAccount()
 
         } else {
             return alert("erro")
@@ -33,10 +33,10 @@ function validateInputs(name, password) {
         if (user.password == password) {
             return "true"
         } else {
-            throw "senha invalida"
+            throw "Senha inválida"
         }
 
     } else {
-        throw "Voce n'ao tem uma conta com esse nome"
+        throw "Vocẽ não tem uma conta com este nome"
     }
 }

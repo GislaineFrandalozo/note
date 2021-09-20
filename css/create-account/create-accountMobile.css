@@ -8,6 +8,7 @@
     --hover-shadow:rgba(255, 255, 255, 0.816);
     --box-form: rgba(249, 249, 249, 0.67);
     --input-color: rgba(196, 196, 196, 1);
+    --notification: rgb(255, 31, 31);
 }
 *{
     margin: 0;
@@ -59,8 +60,14 @@ background-color: var(--box-form);
 box-shadow: 3px 4px 4px var(--text-shadow);
 border-radius: 1.2rem;
 padding: 0.7rem 1.5rem 1.7rem;
-height: 25rem;
+height: 27rem;
 width: 17rem;
+}
+#createNotification{
+   width: 13rem;
+   color: var(--notification);
+   font-size: 0.7rem;
+   text-align: center;
 }
 form{
 display: flex;
@@ -68,7 +75,12 @@ flex-direction: column;
 color: var(--color-font); 
 gap: 0.8rem;
 }
-.box-form > img{
+.box-form > div:first-child{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.box-form > div > img{
 height: 3rem;
 width: auto;
 }
@@ -86,17 +98,26 @@ border-radius: 0.2rem;
 border: 0rem;
 padding: 0.24rem;
 }
-form > button {
+.button{
+   display: flex;
+   justify-content: center;
+}
+.button > button {
 font-family:'M PLUS Rounded 1c', sans-serif;
 font-weight:bolder;
 font-size: 0.8rem;
 background-color: var(--theme-home);
 width: 5rem;
-margin-left: 3rem;
 margin-top: 0.2rem;
 box-shadow: 2px 3px 3px var(--text-shadow);
 border-radius: 0.2rem;
 border: 0rem;
+justify-self: center;
+}
+.final{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 }
 .link-login{
 color: var(--color-font)
