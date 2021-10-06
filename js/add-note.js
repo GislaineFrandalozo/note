@@ -1,6 +1,6 @@
 import { session } from './session.js'
-
-const newSession = session.verifySession("html/home-note.html")
+import { tools } from './tools.js'
+session.verifySession("html/add-note.html")
 
 /* Settings */
 const settings = document.querySelector("#settings")
@@ -21,7 +21,7 @@ settings.addEventListener('click', () => {
     set.then(() => {
         const button = document.querySelector("#sign_out")
         button.addEventListener('click', () => {
-            const exit = session.sign_outSession("html/home-note.html")
+            session.sign_outSession("html/add-note.html")
         })
     }).catch((control) => {
         control.remove()
@@ -49,14 +49,17 @@ text.addEventListener('click', (e) => {
             const textDiv = document.createElement("div")
             textElement.appendChild(textDiv)
             textDiv.setAttribute('class', 'attribute')
-            textDiv.innerHTML = '<h1>Digite um texto</h1><input type=text>'
+            textDiv.innerHTML = '<h2>Digite um texto</h2><textarea name="text" id="textarea"></textarea><button id="buttonTools">ENVIAR</button>'
+            console.log(textDiv)
             resolve()
         }
     })
     text2.then(() => {
-        alert("Desculpa ainda não desenvolvemos esta operação :c")
-       console.log("chega por hj!")
-    }).catch((textControl) => {
+        const buttonTools = document.querySelector("#buttonTools")
+        buttonTools.addEventListener('click', () => {
+        tools.alertTools()
+        })
+    }).catch((textControl) => {                                                                                                                                                                                                                                                                                                                    
         textControl.remove()
     })
 

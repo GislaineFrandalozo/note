@@ -1,6 +1,6 @@
 import { session } from './session.js'
 
-const newSession = session.verifySession("html/home-note.html")
+session.verifySession("html/home-note.html")
 
 /* Settings */
 const settings = document.querySelector("#settings")
@@ -21,7 +21,7 @@ settings.addEventListener('click', () => {
     set.then(() => {
         const button = document.querySelector("#sign_out")
         button.addEventListener('click', () => {
-            const exit = session.sign_outSession("html/home-note.html")
+            session.sign_outSession("html/home-note.html")
         })
     }).catch((control) => {
         control.remove()
