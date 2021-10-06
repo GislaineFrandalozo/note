@@ -6,6 +6,7 @@
     --background-color-page:rgba(242, 242, 242, 1);
     --hover:rgba(196, 196, 196, 0.741);
     --hover-shadow:rgba(255, 255, 255, 0.26);
+    --menu: rgba(196, 196, 196, 1);
 }
 *{
     margin: 0;
@@ -63,4 +64,38 @@ h1{
 .settings > img{
     height: 2.5rem;
     
+}
+.options {
+    display: flex;
+    justify-content:space-between;
+    margin-top: 7%;
+    background-color: var(--menu);
+    box-shadow: 1px 1px 5px var(--text-shadow);
+    border-radius: 0.2rem;
+    width: 4rem;
+    height: 2rem;
+}
+#sign_out{
+    background-color: var(--text-shadow);
+    margin: 8%;
+    padding: 5%;
+    border: 0rem;
+    border-radius: 0.2rem;
+    font-family:'M PLUS Rounded 1c', sans-serif;
+    font-weight:bolder;
+    font-size: 0.8rem;
+    color: var(--color-font);
+    transition: 0.2s;
+}
+#sign_out:hover {
+    box-shadow: 1px 1px 5px var(--text-shadow);
+    background-color: var(--background-color-page);
+}
+#x{
+    color: crimson;
+}
+#x:hover{
+    color:rgb(0, 0, 0);
+    text-shadow: 3px 4px 7px var(--color-font-hover);
+
 }
