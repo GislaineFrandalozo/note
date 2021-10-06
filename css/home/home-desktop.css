@@ -91,11 +91,3 @@ h1{
     box-shadow: 1px 1px 5px var(--text-shadow);
     background-color: var(--background-color-page);
 }
-#x{
-    color: crimson;
-}
-#x:hover{
-    color:rgb(0, 0, 0);
-    text-shadow: 3px 4px 7px var(--color-font-hover);
-
-}

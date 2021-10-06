@@ -5,7 +5,7 @@ const newSession = session.verifySession("html/home-note.html")
 /* Settings */
 const settings = document.querySelector("#settings")
 settings.addEventListener('click', () => {
-    const x = new Promise((resolve, reject) => {
+    const set = new Promise((resolve, reject) => {
         const control = document.querySelector('.options')
         if (control) {
             reject(control)
@@ -18,7 +18,7 @@ settings.addEventListener('click', () => {
             resolve()
         }
     })
-    x.then(() => {
+    set.then(() => {
         const button = document.querySelector("#sign_out")
         button.addEventListener('click', () => {
             const exit = session.sign_outSession("html/home-note.html")
@@ -31,15 +31,35 @@ settings.addEventListener('click', () => {
 
 /* Menu */
 const colorNote = document.querySelector(".color")
-const note = document.querySelector(".note")
+const note = document.querySelector(".note")        /* posso usar note.value */ 
 note.style.backgroundColor = colorNote.value
 colorNote.addEventListener('change', (e) => {
     note.style.backgroundColor = e.target.value
 })
 
 const text = document.querySelector("#text")
-text.addEventListener('click', () => {
-    alert("Desculpa ainda não desenvolvemos esta operação :c")
+text.addEventListener('click', (e) => {
+    console.log(e)
+    const text2 = new Promise((resolve, reject) => {
+      const textControl = document.querySelector('.attribute')
+        if (textControl) {
+            reject(textControl)
+        }else {
+            const textElement = document.querySelector("#main")
+            const textDiv = document.createElement("div")
+            textElement.appendChild(textDiv)
+            textDiv.setAttribute('class', 'attribute')
+            textDiv.innerHTML = '<h1>Digite um texto</h1><input type=text>'
+            resolve()
+        }
+    })
+    text2.then(() => {
+        alert("Desculpa ainda não desenvolvemos esta operação :c")
+       console.log("chega por hj!")
+    }).catch((textControl) => {
+        textControl.remove()
+    })
+
 })
 const checklist = document.querySelector("#checklist")
 checklist.addEventListener('click', () => {

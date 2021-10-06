@@ -5,7 +5,7 @@ const newSession = session.verifySession("html/home-note.html")
 /* Settings */
 const settings = document.querySelector("#settings")
 settings.addEventListener('click', () => {
-    const x = new Promise((resolve, reject) => {
+    const set = new Promise((resolve, reject) => {
         const control = document.querySelector('.options')
         if (control) {
             reject(control)
@@ -18,7 +18,7 @@ settings.addEventListener('click', () => {
             resolve()
         }
     })
-    x.then(() => {
+    set.then(() => {
         const button = document.querySelector("#sign_out")
         button.addEventListener('click', () => {
             const exit = session.sign_outSession("html/home-note.html")
