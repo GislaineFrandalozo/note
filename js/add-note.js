@@ -37,9 +37,9 @@ colorNote.addEventListener('change', (e) => {
     note.style.backgroundColor = e.target.value
 })
 
+const param = []
 const text = document.querySelector("#text")
-text.addEventListener('click', (e) => {
-    console.log(e)
+text.addEventListener('click', () => {
     const text2 = new Promise((resolve, reject) => {
       const textControl = document.querySelector('.attribute')
         if (textControl) {
@@ -50,14 +50,27 @@ text.addEventListener('click', (e) => {
             textElement.appendChild(textDiv)
             textDiv.setAttribute('class', 'attribute')
             textDiv.innerHTML = '<h2>Digite um texto</h2><textarea name="text" id="textarea"></textarea><button id="buttonTools">ENVIAR</button>'
-            console.log(textDiv)
             resolve()
         }
     })
     text2.then(() => {
         const buttonTools = document.querySelector("#buttonTools")
         buttonTools.addEventListener('click', () => {
-        tools.alertTools()
+            const textArea = document.querySelector("#textarea")
+            let vet = '<p>' + textArea.value + '</p>'
+            param.push(vet)
+            console.log(param)
+            console.log(vet)
+            textArea.value = ""
+            tools.Tools(param, innerText)
+           
+            function innerText() {
+            const note = document.querySelector(".note")
+            const p = document.createElement("p")
+            note.appendChild(p)
+            p.setAttribute('class', 'textNote')
+            p.innerHTML = vet
+        }
         })
     }).catch((textControl) => {                                                                                                                                                                                                                                                                                                                    
         textControl.remove()

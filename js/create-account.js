@@ -41,6 +41,7 @@ class form {
         this.date = date
         this.email = email
         this.password = password
+        this.content = ["content", "2","3"]
     }
 }
 function validateInputs(name, password) {
