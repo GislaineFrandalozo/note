@@ -91,3 +91,19 @@ h1{
     box-shadow: 1px 1px 5px var(--text-shadow);
     background-color: var(--background-color-page);
 }
+.main{
+    margin-top: 2%;
+    margin-bottom: 3%;
+    padding-top: 3%;
+    padding-left: 3%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(8rem, 16rem));
+    gap: 50px;
+
+}
+.note{
+    overflow: auto;
+    background-color: cornflowerblue;
+    height: 13rem;
+    width: 15rem;
+}

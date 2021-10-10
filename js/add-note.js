@@ -2,6 +2,9 @@ import { session } from './session.js'
 import { tools } from './tools.js'
 session.verifySession("html/add-note.html")
 
+const colorNote = document.querySelector(".color")
+const note = document.querySelector(".note")  
+  
 /* Settings */
 const settings = document.querySelector("#settings")
 settings.addEventListener('click', () => {
@@ -30,8 +33,6 @@ settings.addEventListener('click', () => {
 })
 
 /* Menu */
-const colorNote = document.querySelector(".color")
-const note = document.querySelector(".note")        /* posso usar note.value */ 
 note.style.backgroundColor = colorNote.value
 colorNote.addEventListener('change', (e) => {
     note.style.backgroundColor = e.target.value
@@ -41,10 +42,10 @@ const param = []
 const text = document.querySelector("#text")
 text.addEventListener('click', () => {
     const text2 = new Promise((resolve, reject) => {
-      const textControl = document.querySelector('.attribute')
+        const textControl = document.querySelector('.attribute')
         if (textControl) {
             reject(textControl)
-        }else {
+        } else {
             const textElement = document.querySelector("#main")
             const textDiv = document.createElement("div")
             textElement.appendChild(textDiv)
@@ -63,16 +64,16 @@ text.addEventListener('click', () => {
             console.log(vet)
             textArea.value = ""
             tools.Tools(param, innerText)
-           
+
             function innerText() {
-            const note = document.querySelector(".note")
-            const p = document.createElement("p")
-            note.appendChild(p)
-            p.setAttribute('class', 'textNote')
-            p.innerHTML = vet
-        }
+                const note = document.querySelector(".note")
+                const p = document.createElement("p")
+                note.appendChild(p)
+                p.setAttribute('class', 'textNote')
+                p.innerHTML = vet
+            }
         })
-    }).catch((textControl) => {                                                                                                                                                                                                                                                                                                                    
+    }).catch((textControl) => {
         textControl.remove()
     })
 
