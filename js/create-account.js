@@ -11,7 +11,7 @@ button.addEventListener('click', (event) => {
         const user = new form(input_name.value, input_date.value, input_email.value, input_password.value)
         const userAccount = localStorage.getItem(input_name.value)
         if (userAccount) {
-            throw "conta"
+            throw "account"
         } else {
             localStorage.setItem(input_name.value, JSON.stringify(user))
             alert("Cadastro criado com sucesso, faça login para iniciar a sessão!")
@@ -23,16 +23,15 @@ button.addEventListener('click', (event) => {
         }
 
     } catch (e) {
-        if(e === "name"){
-            document.getElementById("createNotification").innerHTML = "Nome muito curto, mínimo 3 caracteres."
-        }
-        if(e === "senha"){
-            document.getElementById("createNotification").innerHTML = "Senha muito curta, mínimo 3 caracteres."
-        }
-        if(e === "conta"){
-            document.getElementById("createNotification").innerHTML = "Este nome já está sendo usado"
-        }
+         const caseObj = {
+            name: "Nome muito curto, mínimo 3 caracteres.",
+            password: "Senha muito curta, mínimo 3 caracteres.",
+            account: "Este nome já está sendo usado"
+            }
+            const message = caseObj[e]
+            document.getElementById("createNotification").innerHTML = message
     }
+
 })
 
 class form {
@@ -50,6 +49,6 @@ function validateInputs(name, password) {
         throw "name"
     }
     if (password.length < 3) {
-        throw "senha"
+        throw "password"
     }
 }
