@@ -6,8 +6,7 @@ const colorNote = document.querySelector(".color")
 const note = document.querySelector(".note")  
   
 /* Settings */
-const settings = document.querySelector("#settings")
-settings.addEventListener('click', () => {
+document.querySelector("#settings").addEventListener('click', () => {
     const set = new Promise((resolve, reject) => {
         const control = document.querySelector('.options')
         if (control) {
@@ -22,8 +21,7 @@ settings.addEventListener('click', () => {
         }
     })
     set.then(() => {
-        const button = document.querySelector("#sign_out")
-        button.addEventListener('click', () => {
+        document.querySelector("#sign_out").addEventListener('click', () => {
             session.sign_outSession("html/add-note.html")
         })
     }).catch((control) => {
@@ -39,8 +37,7 @@ colorNote.addEventListener('change', (e) => {
 })
 
 const param = []
-const text = document.querySelector("#text")
-text.addEventListener('click', () => {
+document.querySelector("#text").addEventListener('click', () => {
     const text2 = new Promise((resolve, reject) => {
         const textControl = document.querySelector('.attribute')
         if (textControl) {
@@ -55,10 +52,9 @@ text.addEventListener('click', () => {
         }
     })
     text2.then(() => {
-        const buttonTools = document.querySelector("#buttonTools")
-        buttonTools.addEventListener('click', () => {
+        document.querySelector("#buttonTools").addEventListener('click', () => {
             const textArea = document.querySelector("#textarea")
-            let vet = '<p>' + textArea.value + '</p>'
+            let vet = '<p class="noteContent">' + textArea.value + '</p>'
             param.push(vet)
             console.log(param)
             console.log(vet)

@@ -103,7 +103,26 @@ h1{
 }
 .note{
     overflow: auto;
-    background-color: cornflowerblue;
+    display: flex;
+    flex-direction: column;
     height: 13rem;
     width: 15rem;
+}
+.note> div:first-child{
+    display: flex;
+    justify-content: space-between;
+
+}
+.delete{
+    margin-top: 2%;
+    margin-right: 2%;
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 0.2rem;
+    font-family:'M PLUS Rounded 1c', sans-serif;
+    font-weight:bolder;
+    font-size: 0.8rem;
+    color: crimson;
+    background-color: black;
+    border: 0;
 }
