@@ -5,6 +5,7 @@
 > ### 📌 Descrição
 > O projeto tem um serviço simples de criação de conta e controle de acesso. O usuário poderá criar blocos de anotações, escolher a cor de fundo, definir um título e excluir as notas.Outras ferramentas são visualmente apresentadas mas não foram desenvolvidas, como por exemplo criar tabelas ou listas (porém o usuário é informado a respeito disto ao clicar na opção).
   
+  
 ## 🌱 Conceitos abordados
   
   - JavaScript ES9
