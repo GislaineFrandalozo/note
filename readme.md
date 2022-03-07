@@ -11,7 +11,7 @@
   - JavaScript ES9
     * Controle de dados (I/O).
     * Controle de erro (`try` `catch`)
-    * Funções asyncronas.
+    * Funções assíncronas.
     * Promise.
   
   - CSS3
@@ -37,7 +37,7 @@
   
   ### Getting started
   - Uma das maneiras de inicializar o projeto é utilizando o live server do visual studio. Caso ainda não conheça o live server ele é uma extensão do visual studio que você pode instalar com `ctrl + shift + x` no vs code e pesquisando por "Live Server".
-  - Tudo instalado siga os passos a baixo.
+  - Tudo instalado siga os passos abaixo:
     1. Abra o projeto no visual studio.
     2. Acesse o arquivo `index.html` na pasta "html".
     3. Clique com botão direito em cima do arquivo e selecione a opção "Open with Live Server".
